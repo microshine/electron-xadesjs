@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>BerryAgent</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- <script src="https://peculiarventures.github.io/pv-webcrypto-tests/src/promise.js"></script> -->
+  <!-- <script src="https://peculiarventures.github.io/pv-webcrypto-tests/src/webcrypto-liner.min.js"></script> -->
+  <!-- <script src="https://peculiarventures.github.io/pv-webcrypto-tests/src/asmcrypto.js"></script> -->
+  <!-- <script src="https://peculiarventures.github.io/pv-webcrypto-tests/src/elliptic.js"></script> -->
+  <!-- <script src="https://peculiarventures.github.io/xadesjs/src/xades.min.js"></script> -->
+  <!-- <script type="text/javascript" src="node_modules/xadesjs/dist/xades.js"></script> -->
+  <script type="text/javascript" src="./main.js">
+    //You can also require other files to run in this process
+  </script>
+
+  <script>
+    function show_sign_div() {
+      var signDiv = document.getElementById("signDIV");
+      var verifyDiv = document.getElementById("verifyDIV");
+      signDiv.style.display = "block";
+      verifyDiv.style.display = "none";
+    }
+    function show_verify_div() {
+      var signDiv = document.getElementById("signDIV");
+      var verifyDiv = document.getElementById("verifyDIV");
+      signDiv.style.display = "none";
+      verifyDiv.style.display = "block";
+    }
+  </script>
+
+  <div class="split left">
+    <div class="centered">
+      <h2>
+        <button class="btn btn-secondary btn-lg" onclick="show_sign_div();">Sign</button>
+      </h2>
+      <div id="signDIV" style="display: none;">
+        <h1>XADES::SIGN</h1>
+        <form id="SignxmlForm">
+          <h4>Set xml</h4>
+          <pre id="signature"><code></code></pre>
+          <textarea id="xml1" cols="30" rows="10">
+            </textarea>
+          <input type="button" value="Sign" onclick="sign()">
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
